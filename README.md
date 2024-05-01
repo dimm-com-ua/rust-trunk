@@ -1,8 +1,8 @@
-#RUST-TRUNK
+# RUST-TRUNK
 
 This project contains a Dockerfile for building an environment with specified dependencies. It aims to provide a streamlined setup process for development and deployment.
 
-##Usage
+## Usage
 
 To use this Dockerfile, follow these steps:
 
