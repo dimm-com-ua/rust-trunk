@@ -10,7 +10,8 @@ RUN apt-get install -y curl build-essential libssl-dev cmake pkg-config openssl 
 RUN curl -sL https://deb.nodesource.com/setup_16.x  | bash -
 RUN apt-get -y install nodejs
 
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN #curl https://sh.rustup.rs -sSf | sh -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs/ | sh -s -- --default-toolchain=1.80.0 -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 
 RUN rustup target add wasm32-unknown-unknown && cargo install wasm-bindgen-cli && cargo install --locked trunk
